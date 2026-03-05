@@ -4,9 +4,10 @@
     --panel-bg: #141417;
     --border-dim: #2d2d32;
     
-    /* Solid Accents (No Glows) */
+    /* Accent and Text */
     --accent-cyan: #00f3ff;
     --accent-purple: #9d00ff;
+    --accent-green: #3eff8e;
     --accent-red: #ff003c;
     --text-white: #ffffff;
     --text-muted: #88888b;
@@ -19,7 +20,7 @@ body {
     margin: 0;
 }
 
-/* NavBar */
+/* NavBar Stuff*/
 .nav-container {
     display: flex; 
     justify-content: space-between; 
@@ -177,7 +178,7 @@ footer {
 .robot-card {
     background: var(--panel-bg);
     border: 2px solid var(--accent-purple);
-    border-radius: 45px; /* Matches the rounded look in your drawing */
+    border-radius: 45px;
     padding: 2rem;
     text-align: center;
 }
@@ -226,5 +227,65 @@ footer {
 }
 
 .status-running {
-    color: #3eff8e; /* Bright flat green */
+    color: #3eff8e;
 }
+
+/* Battle Log Table */
+.battle-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--border-dim);
+    margin-top: 2rem;
+    background: var(--panel-bg);
+}
+
+.battle-table th {
+    background: var(--bg-main);
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 1px solid var(--border-dim);
+}
+
+.battle-table td {
+    padding: 1rem;
+    border: 1px solid var(--border-dim);
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Match Detail Column */
+.match-cell {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.robot-info {
+    flex: 1;
+}
+
+.robot-info .name {
+    font-weight: bold;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.robot-info .team {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Battle Table Score */
+.score-display {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.win-score { color: var(--accent-green); } /* Flat Neon Green */
+.loss-score { color: var(--accent-red); } /* Flat Neon Red */
+.score-divider { color: var(--text-white); margin: 0 5px; }
