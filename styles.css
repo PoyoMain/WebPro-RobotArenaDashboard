@@ -1,53 +1,166 @@
+/* Variables */
 :root {
-    --bg-dark: #1e1e1e;
-    --bg-medium: #4a4a4a;
-    --accent-purple: #c3b1e1;
-    --text-color: #000;
+    --bg-main: #09090a;
+    --panel-bg: #141417;
+    --border-dim: #2d2d32;
+    
+    /* Solid Accents (No Glows) */
+    --accent-cyan: #00f3ff;
+    --accent-purple: #9d00ff;
+    --accent-red: #ff003c;
+    --text-white: #ffffff;
+    --text-muted: #88888b;
 }
 
-body { 
-    background: var(--bg-dark); 
-    color: #fff; 
-    font-family: sans-serif; 
-    margin: 0; 
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
-/* Layout Grid */
-header { 
+/* NavBar */
+.nav-container {
     display: flex; 
     justify-content: space-between; 
     padding: 20px; 
-    background: #121212; 
 }
 
-nav a { 
-    color: #a372d8; 
-    margin-left: 15px; 
-    text-decoration: none; 
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--panel-bg);
+    border-bottom: 2px solid var(--accent-cyan);
+    display: flex;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Hero Section */
-.hero { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    background: var(--bg-medium); 
-    padding: 50px; 
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
 }
 
-.robot-graphic { 
-    border: 4px solid #000; 
-    height: 200px; 
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
-/* Competitive Panels */
-.live-stats { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 40px; background: #000; }
-.match-panel, .winner-card { background: var(--accent-purple); color: #000; border-radius: 40px; padding: 20px; text-align: center; }
-.winner-card { border-radius: 20px; margin-bottom: 10px; }
+nav a:hover {
+    color: var(--accent-cyan);
+}
 
-/* News Section */
-.news-section { background: var(--bg-medium); padding: 20px; text-align: center; }
-.main-article { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 30px; }
-.article-image, .img-box { border: 4px solid #000; background: #666; display: flex; align-items: center; justify-content: center; height: 200px; }
-.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.logo {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-footer { display: flex; justify-content: space-between; padding: 20px; background: #121212; }
+/* Layout Elements */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--border-dim);
+}
+
+.video-placeholder {
+    background: #000;
+    border: 2px solid var(--accent-cyan);
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+/* Looping Scroll Area*/
+.loop-container {
+    border-top: 1px solid var(--accent-cyan);
+    border-bottom: 1px solid var(--accent-cyan);
+    background: var(--panel-bg);
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.loop-content {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+
+.loop-item {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: var(--bg-main);
+    border: 1px solid var(--accent-purple);
+    margin: 0 10px;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Content Grid */
+.main-content-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.sidebar {
+    border-right: 1px solid var(--border-dim);
+    padding-right: 1rem;
+}
+
+.sidebar h2 {
+    color: var(--accent-purple);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.hud-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-dim);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--border-dim);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
