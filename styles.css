@@ -9,6 +9,7 @@
     --accent-purple: #9d00ff;
     --accent-green: #3eff8e;
     --accent-red: #ff003c;
+    --accent-yellow: #ffcc00;
     --text-white: #ffffff;
     --text-muted: #88888b;
 }
@@ -290,6 +291,95 @@ footer {
     white-space: nowrap;
 }
 
-.win-score { color: var(--accent-green); } /* Flat Neon Green */
-.loss-score { color: var(--accent-red); } /* Flat Neon Red */
+.win-score { color: var(--accent-green); }
+.loss-score { color: var(--accent-red); }
 .score-divider { color: var(--text-white); margin: 0 5px; }
+
+/* Alert Banner */
+.alert-banner {
+    background: var(--accent-red);
+    color: var(--text-white);
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* Control Layout Grid */
+.control-main-card {
+    border: 2px solid var(--border-dim);
+    border-radius: 60px; /* High radius from your sketch */
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    background: var(--panel-bg);
+}
+
+/* Status Bars */
+.status-container {
+    margin-bottom: 1.5rem;
+}
+
+.status-label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.segmented-bar {
+    display: flex;
+    gap: 4px;
+}
+
+.segment {
+    width: 20px;
+    height: 12px;
+    border: 1px solid #000;
+}
+
+.segment.health-fill { background: var(--accent-red); }
+.segment.battery-fill { background: var(--accent-yellow); }
+.segment.empty { background: var(--panel-bg); }
+
+/* Action Grid */
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-box {
+    border: 2px solid var(--text-white);
+    aspect-ratio: 1/0.6;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Damage Panel */
+.damage-panel {
+    border: 2px solid var(--text-white);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.damage-list {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+}
+
+.critical-part {
+    color: var(--accent-red);
+}
