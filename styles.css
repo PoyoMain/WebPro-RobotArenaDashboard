@@ -66,3 +66,34 @@ nav a {
 
 footer { display: flex; justify-content: space-between; padding: 20px; background: #121212; }
 .jackpot { background: var(--accent-purple); color: #000; padding: 10px 20px; border-radius: 20px; height: auto;}
+/* Image Gallery */
+
+.image-gallery-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 20px;
+    height: 150px;
+    animation: gallery-scroll 10s linear infinite;
+}
+
+.image-gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+@keyframes gallery-scroll {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100vw); }
+}
+
+.image-gallery {
+    animation: gallery-scroll 10s linear infinite;
+}
