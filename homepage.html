@@ -3,75 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <title>Robot Arena Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="site-container">
-    <!-- Header -->
-    <header>
-        <div class="logo">Company Name</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Arena</a>
+    <nav>
+        <div class="logo">RoboCorp</div>
+        <div class="nav-links">
+            <a href="hompage.html">Home</a>
+            <a href="#">Arena Roster</a>
             <a href="#">Battle Log</a>
             <a href="#">Control Panel</a>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div>
+            <h1 style="font-size: 4rem;">Dominance <br> Unleashed</h1>
+            <p>Welcome to the next generation of robot combat monitoring.</p>
+        </div>
+        <div class="video-placeholder">
+            <span>[ LIVE STREAM FEED ]</span>
+        </div>
     </header>
 
-    <!-- Main Feature -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Insert Text Here</h1>
-            <p>Insert Text Here</p>
+    <!-- Looping Scroll -->
+    <div class="loop-container">
+        <div class="loop-content">
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
         </div>
-        <div class="robot-graphic"></div>
-    </section>
+    </div>
 
-    <!-- Arena & Winners -->
-    <section class="live-stats">
-        <div class="match-panel">
-            <h2>Current Match</h2>
-            <div class="match-display">
-                <div class="robot-unit">Robot Name</div>
-                <div class="score">0 : 0 <br><span>14:00</span></div>
-                <div class="robot-unit">Robot Name</div>
-            </div>
-            <h3>Top 16</h3>
-        </div>
-        <div class="winners-panel">
-            <h4>Top Winners</h4>
-            <div class="winner-card">Insert Robot Name — 17 wins</div>
-            <div class="winner-card">Insert Robot Name — 17 wins</div>
-            <div class="winner-card">Insert Robot Name — 17 wins</div>
-        </div>
-    </section>
+    <div class="dashboard-container">
+        <div class="main-content-layout">
+            <!-- Winners Sidebar -->
+            <aside class="sidebar">
+                <h2>Top Winners</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li>1. Raptor-X - 45 Wins</li>
+                    <li>2. Titan-01 - 38 Wins</li>
+                    <li>3. Glitch - 32 Wins</li>
+                </ul>
+            </aside>
 
-    <!-- News Section -->
-    <section class="news-section">
-        <h2>News</h2>
-        <div class="main-article">
-            <div class="article-text">
-                <h3>Header stuff filling this up</h3>
-                <p>The text for this article, idk what else to put here.</p>
-            </div>
-            <div class="article-image">Image</div>
+            <!-- News Section-->
+            <section>
+                <!-- Big News Area -->
+                <div class="hud-panel" style="display: flex; gap: 2rem;">
+                    <div style="flex: 1;">
+                        <h2>Breaking News</h2>
+                        <p>The Neo-Tokyo circuit has reached its final stage. High-frequency scanners detect multiple
+                            upgrades in the Scrapheap team's arsenal.</p>
+                    </div>
+                    <div class="video-placeholder" style="flex: 1;"><span></span></div>
+                </div>
+
+                <!-- Small News Grid Area -->
+                <div class="article-grid">
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Tech Specs Update</h4>
+                        <p>New armor plating requirements.</p>
+                    </div>
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Season Rankings</h4>
+                        <p>Climb the global leaderboards.</p>
+                    </div>
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Arena Maintenance</h4>
+                        <p>Scheduled for 0400 UTC.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="news-grid">
-            <div class="grid-item"><div class="img-box">Image</div><p>Text to fill this space...</p></div>
-            <div class="grid-item"><div class="img-box">Image</div><p>Text to fill this space...</p></div>
-            <div class="grid-item"><div class="img-box">Image</div><p>Text to fill this space...</p></div>
-        </div>
-    </section>
+    </div>
 
     <footer>
-        <span>Footer @copyright</span>
-        <a href="#">Back to Top</a>
+        &copy; 2026 RoboCorp | All Rights Reserved
     </footer>
-</div>
-</div>
 </body>
 
 </html>
