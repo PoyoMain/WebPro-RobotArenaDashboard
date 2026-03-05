@@ -164,3 +164,67 @@ footer {
     color: var(--text-muted);
     font-size: 0.8rem;
 }
+
+/* Roster Grid Layout */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+/* Robot Card Styling */
+.robot-card {
+    background: var(--panel-bg);
+    border: 2px solid var(--accent-purple);
+    border-radius: 45px; /* Matches the rounded look in your drawing */
+    padding: 2rem;
+    text-align: center;
+}
+
+.robot-card h3 {
+    color: var(--text-white);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.robot-media-box {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #000;
+    border: 1px solid var(--border-dim);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-cyan);
+}
+
+.status-line {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.status-running {
+    color: #3eff8e; /* Bright flat green */
+}
