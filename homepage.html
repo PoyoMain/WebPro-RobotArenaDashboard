@@ -3,101 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <title>Robot Arena Dashboard</title>
-    <!-- Add more images as needed -->
-    </div>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="site-container">
-        <!-- Header -->
-        <header>
-            <div class="logo">ROBOCORP</div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Arena</a>
-                <a href="#">Battle Log</a>
-                <a href="#">Control Panel</a>
-            </nav>
-        </header>
+    <nav>
+        <div class="logo">RoboCorp</div>
+        <div class="nav-links">
+            <a href="hompage.html">Home</a>
+            <a href="#">Arena Roster</a>
+            <a href="#">Battle Log</a>
+            <a href="#">Control Panel</a>
+        </div>
+    </nav>
 
-        <!-- Main Feature -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Robot Arena Dashboard</h1>
-                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/d8TiGjMRuzg?start=274"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe></p>
-            </div>
-            <div class="robot-graphic"></div>
-        </section>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div>
+            <h1 style="font-size: 4rem;">Dominance <br> Unleashed</h1>
+            <p>Welcome to the next generation of robot combat monitoring.</p>
+        </div>
+        <div class="video-placeholder">
+            <span>[ LIVE STREAM FEED ]</span>
+        </div>
+    </header>
 
-        <!-- Arena & Winners -->
-        <section class="arena-winners">
-            <div class="arena-panel">
-                <div class="image-gallery">
-                    <img src="./assets/images/Tantrum.webp" alt="Tantrum">
-                    <img src="./assets/images/ENDGAME.webp" alt="ENDGAME">
-                    <img src="./assets/images/Biteforce.webp" alt="Biteforce">
-                    <img src="./assets/images/Sawblade.webp" alt="Sawblade">
-                    <img src="./assets/images/Shovelhead.webp" alt="Shovelhead">
-                    <img src="./assets/images/Vlad.webp" alt="Vlad">
-                    <img src="./assets/images/Backlash.webp" alt="Backlash">
-                    <img src="./assets/images/Jackpot_BB2022.webp" alt="Jackpot2">
-                    <img src="./assets/images/Lucky.webp" alt="Lucky">
-                    <img src="./assets/images/Malice.webp" alt="Malice">
-                    <img src="./assets/images/Tombstone.webp" alt="Tombstone">
-                </div>
-                <h3>Top 16</h3>
-            </div>
-            <div class="winners-panel">
-                <h4>Top Winners</h4>
-                <div class="winner-card">Jackpot — 3 wins</div>
-                <div class="winner-card">Lucky — 1 win</div>
-                <div class="winner-card">Malice — 1 win</div>
-            </div>
-        </section>
-
-        <!-- News Section -->
-        <section class="news-section">
-            <h2>News</h2>
-            <div class="main-article">
-                <div class="article-text">
-                    <h3>Jackpot</h3>
-                    <p>Jackpot is a four-wheel drive, box-shaped robot armed with a large vertical spinner made up of a
-                        drum sandwiched between two diamond-shaped disks. This configuration, dubbed the 'Die-monds',
-                        could be swapped out for a pair of heart-shaped disks called the 'Heartbreaker'. It also
-                        featured six ½" thick forks at the front, which were hinged and designed to slide underneath
-                        opponents.</p>
-                </div>
-                <div class="article-image"><img src="Jackpot.webp" alt="Jackpot"></div>
-            </div>
-            <div class="news-grid">
-                <div class="grid-item">
-                    <div class="img-box"><img src="./assets/images/Lucky.webp" alt="Lucky"></div>
-                    <p><a href="https://battlebots.fandom.com/wiki/Lucky?utm_source=chatgpt.com">Lucky Website</a></p>
-                </div>
-                <div class="grid-item">
-                    <div class="img-box"><img src="./assets/images/Malice.webp" alt="Malice"></div>
-                    <p><a href="https://battlebots.fandom.com/wiki/Malice?utm_source=chatgpt.com">Malice Website</a></p>
-                </div>
-                <div class="grid-item">
-                    <div class="img-box"><img src="./assets/images/Sawblade.webp" alt="Sawblade"></div>
-                    <p><a href="https://battlebots.fandom.com/wiki/Sawblade?utm_source=chatgpt.com">Sawblade Website</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <span>Footer @copyright</span>
-            <a href="#">Back to Top</a>
-        </footer>
+    <!-- Looping Scroll -->
+    <div class="loop-container">
+        <div class="loop-content">
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+            <div class="loop-item"></div>
+        </div>
     </div>
+
+    <div class="dashboard-container">
+        <div class="main-content-layout">
+            <!-- Winners Sidebar -->
+            <aside class="sidebar">
+                <h2>Top Winners</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li>1. Raptor-X - 45 Wins</li>
+                    <li>2. Titan-01 - 38 Wins</li>
+                    <li>3. Glitch - 32 Wins</li>
+                </ul>
+            </aside>
+
+            <!-- News Section-->
+            <section>
+                <!-- Big News Area -->
+                <div class="hud-panel" style="display: flex; gap: 2rem;">
+                    <div style="flex: 1;">
+                        <h2>Breaking News</h2>
+                        <p>The Neo-Tokyo circuit has reached its final stage. High-frequency scanners detect multiple
+                            upgrades in the Scrapheap team's arsenal.</p>
+                    </div>
+                    <div class="video-placeholder" style="flex: 1;"><span></span></div>
+                </div>
+
+                <!-- Small News Grid Area -->
+                <div class="article-grid">
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Tech Specs Update</h4>
+                        <p>New armor plating requirements.</p>
+                    </div>
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Season Rankings</h4>
+                        <p>Climb the global leaderboards.</p>
+                    </div>
+                    <div class="hud-panel">
+                        <div class="video-placeholder" style="height: 100px;"></div>
+                        <h4>Arena Maintenance</h4>
+                        <p>Scheduled for 0400 UTC.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2026 RoboCorp | All Rights Reserved
+    </footer>
 </body>
 
 </html>
