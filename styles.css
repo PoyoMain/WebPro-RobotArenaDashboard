@@ -227,7 +227,11 @@ footer {
 }
 
 .status-running {
-    color: #3eff8e;
+    color: var(--accent-green);
+}
+
+.status-offline {
+    color: var(--accent-red);
 }
 
 /* Battle Log Table */
