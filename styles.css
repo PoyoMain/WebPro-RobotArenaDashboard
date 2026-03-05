@@ -47,7 +47,22 @@ nav a {
 /* News Section */
 .news-section { background: var(--bg-medium); padding: 20px; text-align: center; }
 .main-article { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 30px; }
-.article-image, .img-box { border: 4px solid #000; background: #666; display: flex; align-items: center; justify-content: center; height: 200px; }
+.article-image, .img-box { border: 4px solid #000; background: #666; display: flex; align-items: center; justify-content: center; height: 100px; }
+/* Make Jackpot.webp image smaller in main article */
+.article-image img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+/* Make Lucky.webp image smaller in news grid */
+.img-box img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 footer { display: flex; justify-content: space-between; padding: 20px; background: #121212; }
+.jackpot { background: var(--accent-purple); color: #000; padding: 10px 20px; border-radius: 20px; height: auto;}
