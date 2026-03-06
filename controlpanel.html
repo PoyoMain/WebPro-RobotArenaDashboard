@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>RoboCorp - Control Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">RoboCorp</div>
+        <div class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="roster.html">Arena Roster</a>
+            <a href="battlelog.html">Battle Log</a>
+            <a href="controlpanel.html">Control Panel</a>
+        </div>
+    </nav>
+
+    <!-- Critical Alert Bar -->
+    <div class="alert-banner">
+        Warning: Critical Damage to BackPanel
+    </div>
+
+    <div class="dashboard-container">
+        <div class="control-main-card">
+            
+            <!-- Left Side: Image and Quick Actions -->
+            <div class="left-col">
+                <h2>Raptor-X</h2>
+                <div class="video-placeholder">
+                </div>
+                
+                <div class="action-grid">
+                    <div class="action-box">Pulse</div>
+                    <div class="action-box">Shield</div>
+                    <div class="action-box">Turbo</div>
+                    <div class="action-box">Reset</div>
+                </div>
+            </div>
+
+            <!-- Right Side: Vitals and Damage -->
+            <div class="right-col">
+                <div class="status-container">
+                    <span class="status-label">Health</span>
+                    <div class="segmented-bar">
+                        <div class="segment health-fill"></div><div class="segment health-fill"></div>
+                        <div class="segment health-fill"></div><div class="segment health-fill"></div>
+                        <div class="segment health-fill"></div><div class="segment health-fill"></div>
+                        <div class="segment health-fill"></div><div class="segment health-fill"></div>
+                        <div class="segment health-fill"></div><div class="segment health-fill"></div>
+                        <div class="segment empty"></div><div class="segment empty"></div>
+                    </div>
+                </div>
+
+                <div class="status-container">
+                    <span class="status-label">Battery</span>
+                    <div class="segmented-bar">
+                        <div class="segment battery-fill"></div><div class="segment battery-fill"></div>
+                        <div class="segment battery-fill"></div><div class="segment battery-fill"></div>
+                        <div class="segment battery-fill"></div><div class="segment battery-fill"></div>
+                        <div class="segment empty"></div><div class="segment empty"></div>
+                        <div class="segment empty"></div><div class="segment empty"></div>
+                        <div class="segment empty"></div><div class="segment empty"></div>
+                    </div>
+                </div>
+
+                <div class="damage-panel">
+                    <h3>Damaged Areas</h3>
+                    <ul class="damage-list">
+                        <li>Wheel_1f</li>
+                        <li>Motor</li>
+                        <li class="critical-part">BackPanel [CRITICAL]</li>
+                        <li>PokeArm</li>
+                        <li>WeaponPerif</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 RoboCorp | All Rights Reserved
+    </footer>
+</body>
+</html>
