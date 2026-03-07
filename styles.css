@@ -2,6 +2,64 @@
 .arena-page h2 {
     text-align: center;
 }
+
+.arena-info {
+    text-align: center;
+    margin: 0.75rem auto;
+    max-width: 700px;
+}
+
+.arena-info p {
+    margin: 0;
+}
+
+.arena-link-box {
+    margin: 0.6rem auto 0;
+    padding: 0.6rem 1rem;
+    max-width: 240px;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 10px;
+    background: var(--panel-bg);
+    text-align: center;
+}
+
+.arena-link-box a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.arena-link-box a:hover {
+    color: var(--accent-purple);
+}
+
+/* Arena page image */
+.battlebots-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.arena-video {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0.6rem auto;
+    aspect-ratio: 16/9;
+}
+
+.arena-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 10px;
+}
+
 :root {
     --bg-main: #09090a;
     --panel-bg: #141417;
