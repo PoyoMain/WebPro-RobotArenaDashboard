@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 /* Center Arena header */
 .arena-page h2 {
     text-align: center;
 }
-=======
-/* Variables */
->>>>>>> 488655367dddefa389dd5bb13dd6cd0d13c4a695
 :root {
     --bg-main: #09090a;
     --panel-bg: #141417;
@@ -389,4 +385,46 @@ footer {
 
 .critical-part {
     color: var(--accent-red);
+}
+/* Looping Scroll Area / Image Gallery */
+.image-gallery {
+    border-top: 1px solid var(--accent-cyan);
+    border-bottom: 1px solid var(--accent-cyan);
+    background: var(--panel-bg);
+    padding: 12px 0;
+    overflow: hidden;
+    height: auto; /* Adjust height for smaller images */
+    width: 100%;
+}
+
+.image-gallery-track {
+    display: flex;
+    width: max-content;
+    animation: gallery-scroll 22s linear infinite;
+    will-change: transform;
+}
+
+.image-gallery:hover .image-gallery-track {
+    animation-play-state: paused;
+}
+
+.image-gallery-group {
+    display: flex;
+    gap: 8px;
+    padding-right: 8px;
+}
+
+.image-gallery-group img {
+    width: 120px;   /* bigger images */
+    height: 80px;   /* bigger images */
+    object-fit: cover;
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: block;
+}
+
+@keyframes gallery-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
