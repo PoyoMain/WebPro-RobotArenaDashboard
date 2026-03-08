@@ -66,6 +66,7 @@
     --border-dim: #2d2d32;
     
     /* Accent and Text */
+    --accent-white: #f3feff;
     --accent-cyan: #00f3ff;
     --accent-purple: #9d00ff;
     --accent-green: #3eff8e;
@@ -73,6 +74,9 @@
     --accent-yellow: #ffcc00;
     --text-white: #ffffff;
     --text-muted: #88888b;
+
+    /* Shadows */
+    --shadow-dark-turquoise:rgba(0, 243, 255, 0.2);
 }
 
 body {
@@ -80,6 +84,12 @@ body {
     color: var(--text-white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+}
+
+hr {
+    border: 0; 
+    border-top: 1px solid #333; 
+    margin-bottom: 2rem;
 }
 
 /* NavBar Stuff*/
@@ -236,7 +246,22 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
 }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.article-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.article-grid > *:nth-child(3) { animation-delay: 0.3s; }
+
 
 h1, h2, h3 {
     margin-top: 0;
@@ -267,8 +292,15 @@ footer {
     border-radius: 45px;
     padding: 2rem;
     text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
+.robot-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 10px 20px var(--shadow-dark-turquoise);
+}
 
 .robot-card h3 {
     color: var(--text-white);
@@ -459,6 +491,21 @@ footer {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-box:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-main);
+    box-shadow: 0 0 15px var(--text-white);
+    transform: scale(1.02);
+}
+
+.action-box:active {
+    transform: scale(0.95);
 }
 
 /* Damage Panel */
@@ -543,6 +590,35 @@ footer {
     border-radius: 8px;
 }
 
+/* Screen Anims */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-main);
+    z-index: 9999;
+    pointer-events: none;
+    animation: fadeOut 0.6s forwards;
+}
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+
+.page-fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .hover-jackpot,
 .hover-lucky,
 .hover-malice,
@@ -598,3 +674,4 @@ footer {
 .grid-item a:hover {
     color: var(--accent-purple);
 }
+
