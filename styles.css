@@ -522,6 +522,22 @@ footer {
     border-radius: 8px;
 }
 
+.hover-jackpot,
+.hover-lucky,
+.hover-malice,
+.hover-sawblade {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.hover-jackpot:hover,
+.hover-lucky:hover,
+.hover-malice:hover,
+.hover-sawblade:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 22px rgba(0, 243, 255, 0.35);
+    filter: brightness(1.06);
+}
+
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
