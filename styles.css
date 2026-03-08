@@ -389,6 +389,10 @@ footer {
     background: var(--panel-bg);
 }
 
+.control-main-card + .control-main-card {
+    margin-top: 2rem;
+}
+
 /* Status Bars */
 .status-container {
     margin-bottom: 1.5rem;
