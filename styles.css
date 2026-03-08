@@ -119,6 +119,16 @@ nav a:hover {
     color: var(--accent-cyan);
 }
 
+.arena-page-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.arena-page-link:hover {
+    color: var(--accent-purple);
+}
+
 .logo {
     color: var(--accent-cyan);
     font-size: 1.5rem;
