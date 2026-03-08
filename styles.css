@@ -161,7 +161,15 @@ nav a:hover {
     justify-content: center;
     color: var(--accent-cyan);
     font-weight: bold;
+    flex: 1;
 }
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* Looping Scroll Area*/
 .loop-container {
@@ -185,6 +193,12 @@ nav a:hover {
     background: var(--bg-main);
     border: 1px solid var(--accent-purple);
     margin: 0 10px;
+}
+
+.loop-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @keyframes scroll {
@@ -255,6 +269,7 @@ footer {
     text-align: center;
 }
 
+
 .robot-card h3 {
     color: var(--text-white);
     margin-bottom: 1.5rem;
@@ -271,6 +286,12 @@ footer {
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
+}
+
+.robot-media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .stats-row {
