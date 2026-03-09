@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot Arena Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <title>Robot Arena Homepage</title>
@@ -33,14 +32,15 @@
             <h1 style="font-size: 4rem;">Robot Arena Dashboard</h1>
         </div>
 
-        <p><iframe width="560" height="315" src="https://www.youtube.com/embed/d8TiGjMRuzg?start=274" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></p>
+        <iframe width="600" height="320" src="https://www.youtube.com/embed/4_8sSVupS60"
+            title="Tombstone vs. Radioactive - BattleBots"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
     <!-- Arena & Winners -->
     <div class="loop-container">
-        <h3>Top 11</h3>
+        <h2>Top 11</h2>
         <div class="loop-content">
             <div class="loop-item"><img src="./images/Tantrum.webp" alt="Tantrum"></div>
             <div class="loop-item"><img src="./images/ENDGAME.webp" alt="ENDGAME"></div>
@@ -70,39 +70,48 @@
             </aside>
 
             <!-- News Section-->
-            <section>
-                <!-- Big News Area -->
-                <div class="hud-panel" style="display: flex; gap: 2rem;">
-                    <div style="flex: 1;">
-                        <h2>Breaking News</h2>
-                        <p>The Neo-Tokyo circuit has reached its final stage. High-frequency scanners detect
-                            multiple
-                            upgrades in the Scrapheap team's arsenal.</p>
-                    </div>
-                    <div class="video-placeholder"><img src="./images/Tantrum.webp" alt="Tantrum"></div>
-                </div>
+<section>
+    <!-- Big News Area -->
+    <div class="robot-card" style="display: flex; gap: 2rem; text-align: left; align-items: center; border-radius: 30px;">
+        <div style="flex: 1;">
+            <h2 >Breaking News</h2>
+            <p>The Neo-Tokyo circuit has reached its final stage. High-frequency scanners detect multiple upgrades in the Scrapheap team's arsenal.</p>
+        </div>
+        <div class="robot-media-box" style="flex: 1; margin-bottom: 0;">
+            <img src="./images/Tantrum.webp" alt="Tantrum">
+        </div>
+    </div>
 
-                <!-- Small News Grid Area -->
-                <div class="article-grid">
-                    <div class="hud-panel">
-                        <div class="video-placeholder"><img src="./images/ENDGAME.webp" alt="ENDGAME"></div>
-                        <h4>Tech Specs Update</h4>
-                        <p>New armor plating requirements.</p>
-                    </div>
-                    <div class="hud-panel">
-                        <div class="video-placeholder" style="height: 100px;"><img src="./images/Vlad.webp" alt="Vlad">
-                        </div>
-                        <h4>Season Rankings</h4>
-                        <p>Climb the global leaderboards.</p>
-                    </div>
-                    <div class="hud-panel">
-                        <div class="video-placeholder" style="height: 100px;"><img src="./images/Tombstone.webp"
-                                alt="Tombstone"></div>
-                        <h4>Arena Maintenance</h4>
-                        <p>Scheduled for 0400 UTC.</p>
-                    </div>
-                </div>
-            </section>
+    <!-- Small News Grid Area -->
+    <div class="article-grid" style="margin-top: 2rem;">
+        <!-- Card 1 -->
+        <div class="robot-card">
+            <div class="robot-media-box">
+                <img src="./images/ENDGAME.webp" alt="ENDGAME">
+            </div>
+            <h3>Tech Specs Update</h3>
+            <p style="color: var(--text-muted);">New armor plating requirements for all heavyweights.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="robot-card">
+            <div class="robot-media-box">
+                <img src="./images/Vlad.webp" alt="Vlad">
+            </div>
+            <h3>Season Rankings</h3>
+            <p style="color: var(--text-muted);">Check the global leaderboards for this month.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="robot-card">
+            <div class="robot-media-box">
+                <img src="./images/Tombstone.webp" alt="Tombstone">
+            </div>
+            <h3>Arena Maintenance</h3>
+            <p style="color: var(--text-muted);">Scheduled repairs for the floor flippers at 0400 UTC.</p>
+        </div>
+    </div>
+</section>
         </div>
     </div>
 
